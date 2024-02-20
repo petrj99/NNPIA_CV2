@@ -1,9 +1,6 @@
 package com.example.nnpia_cv2.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/api/v1")
 @RestController
@@ -17,5 +14,10 @@ public class HelloController {
     @GetMapping("/{string}")
     public String helloWorldWithParameter(@PathVariable("string") String string){
         return "Received string: " + string;
+    }
+
+    @GetMapping("/query")
+    public String helloQueryParam(@RequestParam String message){
+        return "Hello world from query with param, message: " + message;
     }
 }
