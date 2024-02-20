@@ -11,9 +11,14 @@ public class HelloController {
         return "Hello World from Spring Boot application";
     }
 
-    @GetMapping("/{string}")
+    @GetMapping("/text/{string}")
     public String helloWorldWithParameter(@PathVariable("string") String string){
         return "Received string: " + string;
+    }
+
+    @RequestMapping(value = "/{string}", method = RequestMethod.GET)
+    public String helloWorldWithGet(@PathVariable("string") String string) {
+        return "Received string through GET: " + string;
     }
 
     @GetMapping("/query")
