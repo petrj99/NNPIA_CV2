@@ -6,6 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -25,4 +28,6 @@ public class AppUser {
     private LocalDateTime creationDate;
     @Column
     private LocalDateTime updateDate;
+    @OneToMany(mappedBy = "author")
+    private List<Task> tasks = Collections.emptyList();
 }

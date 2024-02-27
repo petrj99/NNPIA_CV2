@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 
@@ -23,6 +24,8 @@ public class Task {
     private LocalDateTime creation_date;
     @Column
     private LocalDateTime update_date;
-    @Column
-    private Long author_id;
+    @ManyToOne
+    @JoinColumn(name = "author_id", nullable = false)
+    @ToString.Exclude
+    private AppUser author_id;
 }
