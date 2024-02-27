@@ -2,6 +2,10 @@ server:
   port: 9000
 
 spring:
-  mvc:
-    servlet:
-      path: /api/v1
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nnpia
+    username: nnpia
+    password: nnpia
+  jpa:
+    hibernate:
+      ddl-auto: update
