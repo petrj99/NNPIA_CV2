@@ -28,6 +28,6 @@ public class AppUser {
     private LocalDateTime creationDate;
     @Column
     private LocalDateTime updateDate;
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author_id")
     private List<Task> tasks = Collections.emptyList();
 }
