@@ -1,9 +1,6 @@
 package com.example.nnpia_cv2.entitties;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,9 +15,14 @@ public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column
     private String username;
+    @Column
     private String password;
+    @Column
     private Boolean active;
+    @Column
     private LocalDateTime creationDate;
+    @Column
     private LocalDateTime updateDate;
 }
