@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -30,4 +31,6 @@ public class AppUser {
     private LocalDateTime updateDate;
     @OneToMany(mappedBy = "author_id")
     private List<Task> tasks = Collections.emptyList();
+    @OneToMany(mappedBy = "appUserRole")
+    private Set<AppUserRole> appUserRoles;
 }

@@ -23,5 +23,12 @@ public class DatabaseRunner implements CommandLineRunner {
         user1.setActive(true);
 
         appUserRepository.save(user1);
+
+        AppUser user2 = new AppUser();
+        user2.setUsername("user02");
+        user2.setPassword("heslo02");
+        user2.setActive(false);
+
+        appUserRepository.save(user2);
     }
 }
