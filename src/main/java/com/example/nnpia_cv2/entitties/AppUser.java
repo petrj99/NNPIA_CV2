@@ -11,6 +11,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
+//ddl-auto může nabývat direktiv:
+//none - žádná změna schématu
+//validate - oveří, že schéma databáze odpovídá mapování entit
+//update - aktualizuje schéma databáze podle mapování entit
+//create - vytvoří nové schéma databáze
+//create-drop - vytvoří nové schéma a odstraní schéma, když je SessionFactory uzavřena
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
