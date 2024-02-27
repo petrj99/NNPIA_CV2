@@ -2,6 +2,14 @@ package com.example.nnpia_cv2.controller;
 
 import org.springframework.web.bind.annotation.*;
 
+// YAML - navržen tak, aby byl snadno čitelný a psatelný pro lidi,  používá odsazení pro reprezentaci hierarchie dat
+// JSON - používá uzavřené složené závorky pro objekty a hranaté závorky pro pole, což umožňuje jednoduchou a přímou reprezentaci dat,
+// XML - umožňuje definovat vlastní značky a atributy, což poskytuje vysokou míru přizpůsobení
+
+
+
+// @Controller - vrací název pohledu (view name), musí se explicitně použít @ResponseBody na metodách kontroleru
+// @RestController - kombinuje @Controller a @ResponseBody, 
 //@RequestMapping("/api/v1")
 @RestController
 public class HelloController {
