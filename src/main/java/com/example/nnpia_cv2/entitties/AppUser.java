@@ -1,6 +1,10 @@
 package com.example.nnpia_cv2.entitties;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -27,6 +31,9 @@ public class AppUser {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column
+    @NotNull(message = "Username cannot be null")
+    @NotEmpty(message = "Username cannot be empty")
+    @Size(max = 50, message = "Maximum length of username is 50 characters")
     private String username;
     @Column
     private String password;
