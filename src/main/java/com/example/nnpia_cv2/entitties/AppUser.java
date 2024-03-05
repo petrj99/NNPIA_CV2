@@ -38,6 +38,6 @@ public class AppUser {
     private LocalDateTime updateDate;
     @OneToMany(mappedBy = "author_id")
     private List<Task> tasks = Collections.emptyList();
-    @OneToMany(mappedBy = "appUserRole")
+    @OneToMany(mappedBy = "appUser")
     private Set<AppUserRole> appUserRoles;
 }
