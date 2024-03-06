@@ -7,10 +7,6 @@ import org.springframework.web.bind.annotation.*;
 // XML - umožňuje definovat vlastní značky a atributy, což poskytuje vysokou míru přizpůsobení
 
 
-
-// @Controller - vrací název pohledu (view name), musí se explicitně použít @ResponseBody na metodách kontroleru
-// @RestController - kombinuje @Controller a @ResponseBody, 
-//@RequestMapping("/api/v1")
 @RestController
 public class HelloController {
 

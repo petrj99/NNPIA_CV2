@@ -1,7 +1,6 @@
 package com.example.nnpia_cv2.controller;
 
 import com.example.nnpia_cv2.entitties.AppUser;
-import com.example.nnpia_cv2.entitties.AppUserRole;
 import com.example.nnpia_cv2.repository.AppUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
